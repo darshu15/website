@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="stylesheet" type="text/css" href="styles1.css">
+</head>
+<body>
+
+<div class="reservation-form">
+ <h2>Reservation</h2>
+ <form>
+ <label for="name">Name:</label><br>
+ <input class=input-class type="text" id="name" name="name"><br>
+ <label for="email">Email:</label><br>
+ <input class=input-class type="text" id="email" name="email"><br>
+ <label for="phone">Phone:</label><br>
+ <input class=input-class type="text" id="phone" name="phone"><br>
+ <label for="guests">Number of Guests:</label><br>
+ <input class=input-class type="text" id="guests" name="guests"><br>
+ <label for="date">Date:</label><br>
+ <input class=input-class type="date" id="date" name="date"><br>
+ <label for="time">Time:</label><br>
+ <input class=input-class type="time" id="time" name="time"><br>
+ <input type="submit" value="Submit">
+ <script>
+    document.querySelector(".reservation-form").addEventListener("submit", function(event) {
+       event.preventDefault();
+       let input = document.querySelector(".input-class");
+       if(input.value === "") {
+         alert("Please fill out all the required fields!");
+       } else {
+         alert("Your reservation has been submitted successfully! We will update you soon ");
+       }
+    });
+   </script>
+ </form>
+</div>
+
+</body>
+</html>
